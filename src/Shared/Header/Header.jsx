@@ -1,7 +1,8 @@
 import React from "react";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+
 
 const Header = () => {
 
@@ -44,13 +45,13 @@ const Header = () => {
 
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow   w-52">
             <li>
-              <Link to='/'>Home</Link>
+              <NavLink className={({ isActive }) => isActive ? "border-2 border-b-blue-800" : ""   } to='/'>Home</NavLink>
             </li>
           
             <li>
-              <Link to='/blog'>Blog</Link>
+              <NavLink className={({ isActive }) => isActive ? "border-2 border-b-blue-800" : ""   }  to='/blog'>Blog</NavLink>
             </li>
           </ul>
 
@@ -65,11 +66,11 @@ const Header = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link>Home</Link>
+          <NavLink className={({ isActive }) => isActive ? " border-2 border-b-blue-800" : ""   }  to='/'>Home</NavLink>
           </li>
          
           <li>
-            <Link to='/blog'>Blog</Link>
+          <NavLink className={({ isActive }) => isActive ?"border-2 border-b-blue-800" : ""   }  to='/blog'>Blog</NavLink>
           </li>
         </ul>
       </div>

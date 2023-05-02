@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Registration = () => {
 
@@ -53,7 +54,8 @@ const Registration = () => {
         .catch(error =>{
             console.log(error);
             setError(error.message)
-        })
+        });
+
 
         
 
@@ -71,18 +73,24 @@ const Registration = () => {
       })
 
     
-  }
+  };
 
 
 
   }
+
+
+
 
 
 
     return (
         
             <div className="hero min-h-screen ">
-      <div className="hero-content ">
+      <div className="hero-content flex-col lg:flex-row-reverse w-full gap-12 ">
+
+   
+
         <div className="card flex-shrink-0 w-96 shadow-2xl bg-base-500 ">
 
           <form className="card-body " onSubmit={handleSignUp}>

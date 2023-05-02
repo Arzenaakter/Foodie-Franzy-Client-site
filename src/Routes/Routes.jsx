@@ -5,6 +5,7 @@ import Main from "../Layouts/Main";
 import Blog from "../Pages/Blog/Blog";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
+import Error from "../Pages/ErrorPage/Error";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             },
         ]
       },
+      {
+        path:'/*',
+        element:<Error></Error>
+      }
 
 ])
 export default router;
