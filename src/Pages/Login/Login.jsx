@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 import { toast } from 'react-toastify';
@@ -16,6 +16,10 @@ const Login = () => {
   const {user,LogIn,GoogleSignIn,GithubSignIn} = useContext(AuthContext)
 
  const [error, setError] = useState([])
+ 
+
+
+ const navigate = useNavigate()
 
   const handleLogin = event =>{
     event.preventDefault()
@@ -30,7 +34,10 @@ const Login = () => {
        const loggedUser =result.user;
        console.log(loggedUser);
        toast(" successfully LogIn",{position: "top-center",});
-      form.reset()
+
+       navigate('/')
+
+       form.reset()
       
 
     })

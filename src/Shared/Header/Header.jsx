@@ -1,7 +1,26 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Header = () => {
+
+  const {user,logOut }= useContext(AuthContext);
+
+  // logout
+
+  const handleLogout =()=>{
+    logOut()
+    .then()
+    .catch(error =>{
+      console.log(error);
+    })
+  }
+
+
+
+
+
   return (
     <div className="navbar bg-base-300 mx-auto">
       <div className="navbar-start">
@@ -57,8 +76,13 @@ const Header = () => {
 
 
       <div className="navbar-end  gap-4">
-        <div className=""><span className="">hola</span></div>
-        <Link className="btn" to='/login'>Login</Link>
+
+        {user ? 
+        <>
+          <img src="" alt="User-Profile" />  <button className="btn" onClick={handleLogout}>LogOut</button>
+        </> : <Link className="btn" to='/login'>Login</Link> }
+        
+       
       </div>
 
 
