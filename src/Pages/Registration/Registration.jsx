@@ -22,6 +22,9 @@ const Registration = () => {
    const password = form.password.value;
    const confirm = form.confirm.value;
 
+
+   setError( '')
+
    console.log(name,photo,email,password,confirm);
 
         if(password != confirm){
@@ -48,6 +51,7 @@ const Registration = () => {
         })
         .catch(error =>{
             console.log(error);
+            setError(error.message)
         })
 
 
