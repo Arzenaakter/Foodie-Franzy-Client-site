@@ -9,7 +9,7 @@ const Registration = () => {
 
    const [error, setError] = useState([])
 
-  const {SignUp} = useContext(AuthContext);
+  const {SignUp,UpdateUserData} = useContext(AuthContext);
 
 
 
@@ -46,6 +46,7 @@ const Registration = () => {
 
             toast("Registration has been successfully completed",{position: "top-center",});
             form.reset()
+            userData(result.user,name,photo)
 
            
         })
@@ -54,11 +55,28 @@ const Registration = () => {
             setError(error.message)
         })
 
+        
 
+        
+  // updateUser data 
+
+     const userData =()=>{
+      UpdateUserData(name,photo)
+      .then(()=>{
+        console.log('user name updated');
+      })
+      .catch(error =>{
+        console.log(error);
+
+      })
+
+    
+  }
 
 
 
   }
+
 
 
     return (

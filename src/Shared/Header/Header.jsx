@@ -79,7 +79,7 @@ const Header = () => {
 
         {user ? 
         <>
-          <img src="" alt="User-Profile" />  <button className="btn" onClick={handleLogout}>LogOut</button>
+          <img className="w-12 rounded-full" title = { user.displayName} src={user.photoURL} alt="User-Profile" />  <button className="btn" onClick={handleLogout}>LogOut</button>
         </> : <Link className="btn" to='/login'>Login</Link> }
         
        
