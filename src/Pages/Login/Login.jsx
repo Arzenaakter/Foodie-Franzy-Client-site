@@ -13,7 +13,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 
 const Login = () => {
-  const {user,LogIn,GoogleSignIn} = useContext(AuthContext)
+  const {user,LogIn,GoogleSignIn,GithubSignIn} = useContext(AuthContext)
 
  const [error, setError] = useState([])
 
@@ -64,6 +64,16 @@ const Login = () => {
   //  github sign in
 
   const handleGithubSign =()=>{
+    GithubSignIn()
+    .then(result =>{
+      const githubUser = result.user;
+      toast(" successfully sign in with Github",{position: "top-center",});
+      console.log(githubUser);
+
+    })
+    .catch(error =>{
+      console.log(error);
+    })
 
   }
 
