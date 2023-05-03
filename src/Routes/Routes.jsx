@@ -48,7 +48,10 @@ const router = createBrowserRouter([
            { 
             path:':id',
             element: <SingleChefRecp></SingleChefRecp>,
-            loader:({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
+            loader:({params}) => fetch(` http://localhost:5000/chefs/${params.id}`)
+
+
+           
         }
 
         ]
