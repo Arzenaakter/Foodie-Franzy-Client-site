@@ -1,14 +1,9 @@
 import React, { useState, useContext } from "react";
-
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-
-
 
 
 
@@ -18,9 +13,11 @@ const Login = () => {
 
  const [error, setError] = useState([])
  
-
-
  const navigate = useNavigate()
+ const location = useLocation();
+
+ const from = location.state?.from?.pathname || "/all-recipes"
+//  console.log(from);
 
   const handleLogin = event =>{
     event.preventDefault()
@@ -33,12 +30,10 @@ const Login = () => {
     LogIn(email,password)
     .then(result =>{
        const loggedUser =result.user;
-       console.log(loggedUser);
+      //  console.log(loggedUser);
        toast(" successfully LogIn",{position: "top-center",});
-
-       navigate('/')
-
-       form.reset()
+       navigate(from,{replace:true});
+       form.reset();
       
 
     })
@@ -57,8 +52,9 @@ const Login = () => {
     GoogleSignIn()
     .then(result =>{
        const googleUser = result.user;
-       console.log(googleUser);
+      //  console.log(googleUser);
        toast(" successfully sign in with google",{position: "top-center",});
+       navigate(from,{replace:true});
 
        UpdateUserData(googleUser.displayName,googleUser.photoURL)
      
@@ -79,8 +75,9 @@ const Login = () => {
     GithubSignIn()
     .then(result =>{
       const githubUser = result.user;
-      console.log(githubUser);
+      // console.log(githubUser);
       toast(" successfully sign in with Github",{position: "top-center",});
+      navigate(from,{replace:true});
 
       UpdateUserData(githubUser.displayName,githubUser.photoURL)
       

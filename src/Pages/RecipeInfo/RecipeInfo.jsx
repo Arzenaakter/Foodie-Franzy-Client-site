@@ -20,7 +20,7 @@ const handleFav =()=>{
 
     const [reating, setRating] =  useState(0)
     const {recipe_name,cooking_method, ingredients,rating,recipe_img} = recipe
-    console.log(recipe);
+    // console.log(recipe);
     return (
 
  

@@ -14,9 +14,9 @@ const Banner = () => {
           />
 
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                <h1 className="text-3xl font-bold mb-2">Delicious Burgers</h1>
-                <p className="text-lg">Try our mouth-watering  burgers, made with the freshest ingredients and served on a wooden board.</p>
-                <button className="bg-white text-black font-bold py-2 px-4 mt-4 rounded hover:bg-gray-200">Order now</button>
+                <h1 className="lg:text-3xl sm:text-xl font-bold mb-2">Delicious Burgers</h1>
+                <p className="lg:text-lg sm:text-sm">Try our mouth-watering  burgers, made with the freshest ingredients and served on a wooden board.</p>
+                <button className="bg-white text-black font-bold py-2 px-4 mt-4  rounded hover:bg-gray-200">Order now</button>
             </div>
 
 
@@ -41,8 +41,8 @@ const Banner = () => {
 
 
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-            <h1 className="text-3xl font-bold mb-2">Delicious Chowmein</h1>
-            <p className="text-lg">Taste the difference in our  chow mein, crafted with love and care using traditional techniques and served hot for a satisfying and delicious experience.</p>
+            <h1 className=" font-bold mb-2 lg:text-3xl sm:text-xl">Delicious Chowmein</h1>
+            <p className="lg:text-lg sm:text-sm">Taste the difference in our  chow mein, crafted with love and care using traditional techniques and served hot for a satisfying and delicious experience.</p>
             <button className="bg-white text-black font-bold py-2 px-4 mt-4 rounded hover:bg-gray-200">Order now</button>
         </div>
 
@@ -66,8 +66,8 @@ const Banner = () => {
           />
 
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                <h1 className="text-3xl font-bold mb-2">Delicious Pasta</h1>
-                <p className="text-lg">Indulge in the rich and creamy flavors of our signature pasta dishes, made with the finest selection of fresh ingredients and served hot on your plate</p>
+                <h1 className=" font-bold mb-2 lg:text-3xl sm:text-xl">Delicious Pasta</h1>
+                <p className="lg:text-lg sm:text-sm">Indulge in the rich and creamy flavors of our signature pasta dishes, made with the finest selection of fresh ingredients and served hot on your plate</p>
                 <button className="bg-white text-black font-bold py-2 px-4 mt-4 rounded hover:bg-gray-200">Order now</button>
             </div>
 
@@ -90,8 +90,8 @@ const Banner = () => {
             className="w-full  opacity-90 blur-[2px]"
           />
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-            <h1 className="text-3xl font-bold mb-2">Delicious Grill</h1>
-            <p className="text-lg">Try our mouth-watering homemade burgers, made with the freshest ingredients and served on a wooden board.</p>
+            <h1 className=" font-bold mb-2 lg:text-3xl sm:text-xl">Delicious Grill</h1>
+            <p className="lg:text-lg sm:text-sm">Try our mouth-watering homemade burgers, made with the freshest ingredients and served on a wooden board.</p>
             <button className="bg-white text-black font-bold py-2 px-4 mt-4 rounded hover:bg-gray-200">Order now</button>
         </div>
 

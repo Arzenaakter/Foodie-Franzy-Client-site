@@ -9,6 +9,7 @@ import Error from "../Pages/ErrorPage/Error";
 import Recipes from "../Pages/Recipes/Recipes";
 import ChefLayout from "../Layouts/ChefLayout";
 import SingleChefRecp from "../Pages/SingleChefRecp/SingleChefRecp";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
         children:[
            { 
             path:':id',
-            element: <SingleChefRecp></SingleChefRecp>,
+            element: <PrivateRoute><SingleChefRecp></SingleChefRecp></PrivateRoute>,
             loader:({params}) => fetch(` http://localhost:5000/chefs/${params.id}`)
 
 

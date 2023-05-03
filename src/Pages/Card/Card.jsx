@@ -10,8 +10,8 @@ const Card = ({chef}) => {
     // console.log("card",chef);
     return (
         <>
-        <div className="card w-full bg-base-100 shadow-2xl">
-                <figure><img src={chefPicture} className='w-80 h-60  pt-10  ' alt="chef picture" /></figure>
+        <div className="card w-full bg-base-100 shadow-2xl ">
+                <figure><img src={chefPicture} className='lg:w-80  h-60  pt-10  ' alt="chef picture" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
                          {chefName}

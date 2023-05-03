@@ -45,14 +45,17 @@ const Header = () => {
 
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow   w-52">
-            <li>
-              <NavLink className={({ isActive }) => isActive ? "border-2 border-b-blue-800" : ""   } to='/'>Home</NavLink>
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow  bg-[#2B2623] text-white   w-52">
+            <li className="link link-hover">
+              <NavLink className={({ isActive }) => isActive ? "link text-blue-500 font-bold" : ""   } to='/'>Home</NavLink>
             </li>
           
-            <li>
-              <NavLink className={({ isActive }) => isActive ? "border-2 border-b-blue-800" : ""   }  to='/blog'>Blog</NavLink>
+            <li className="link link-hover">
+              <NavLink className={({ isActive }) => isActive ? "link text-blue-500 font-bold" : ""   }  to='/blog'>Blog</NavLink>
             </li>
+            <li className="link link-hover">
+          <NavLink className={({ isActive }) => isActive ?"link text-blue-500 font-bold" : ""   }  to='/All-recipes'>All Recipes</NavLink>
+          </li>
           </ul>
 
 
@@ -63,17 +66,17 @@ const Header = () => {
       </div>
 
 
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-          <NavLink className={({ isActive }) => isActive ? " border-2 border-b-blue-800" : ""   }  to='/'>Home</NavLink>
+      <div className="navbar-center hidden lg:flex  ">
+        <ul className="menu menu-horizontal   px-1">
+          <li className="link link-hover">
+          <NavLink className={({ isActive }) => isActive ? " link text-blue-500 font-bold" : ""   }  to='/'>Home</NavLink>
           </li>
          
-          <li>
-          <NavLink className={({ isActive }) => isActive ?"border-2 border-b-blue-800" : ""   }  to='/blog'>Blog</NavLink>
+          <li className="link link-hover">
+          <NavLink className={({ isActive }) => isActive ?"link text-blue-500 font-bold" : ""   }  to='/blog'>Blog</NavLink>
           </li>
-          <li>
-          <NavLink className={({ isActive }) => isActive ?"border-2 border-b-blue-800" : ""   }  to='/All-recipes'>All Recipes</NavLink>
+          <li className="link link-hover">
+          <NavLink className={({ isActive }) => isActive ?"link text-blue-500 font-bold" : ""   }  to='/All-recipes'>All Recipes</NavLink>
           </li>
         </ul>
       </div>
