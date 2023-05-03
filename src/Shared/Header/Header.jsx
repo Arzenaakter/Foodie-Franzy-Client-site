@@ -72,6 +72,9 @@ const Header = () => {
           <li>
           <NavLink className={({ isActive }) => isActive ?"border-2 border-b-blue-800" : ""   }  to='/blog'>Blog</NavLink>
           </li>
+          <li>
+          <NavLink className={({ isActive }) => isActive ?"border-2 border-b-blue-800" : ""   }  to='/All-recipes'>All Recipes</NavLink>
+          </li>
         </ul>
       </div>
 

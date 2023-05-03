@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 
 const Card = ({chef}) => {
 
-    const {chefName,chefPicture,likes,numRecipes,shortBio,yearsOfExperience} = chef;
+    const {chefName,chefPicture,likes,numRecipes,shortBio,yearsOfExperience,id} = chef;
+    
 
-
-
-
-    console.log("card",chef);
+    // console.log("card",chef);
     return (
         <>
         <div className="card w-full bg-base-100 shadow-2xl">
@@ -23,7 +21,7 @@ const Card = ({chef}) => {
                     <p>Numbers of recipes : {numRecipes}</p>
                     <div className="card-actions justify-between mt-4 items-center">
                     <div className="flex items-center	gap-4"><FaThumbsUp className='text-blue-500 text-2xl'/>   {likes}</div>
-                    <Link  className="btn btn-outline">View Recipes</Link>
+                    <Link  className="btn btn-outline" to={`/chef-recipe/${id}`}>View Recipes</Link>
                     </div>
                 </div>
         </div>
