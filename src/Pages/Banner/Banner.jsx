@@ -3,11 +3,11 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <>
-      <div className="carousel w-full lg:h-[550px] my-6 ">
+    <div className="px-6 lg:px-0">
+      <div className="carousel w-full lg:h-[550px] my-6  ">
 
 {/* slider 1 */}
-        <div id="slide1" className="overlay carousel-item relative w-full  ">
+        <div id="slide1" className=" carousel-item relative w-full  ">
           <img
             src="https://img.freepik.com/premium-photo/fresh-tasty-homemade-burger-wooden-table_147620-1307.jpg?size=626&ext=jpg&ga=GA1.2.1435761111.1680237800&semt=sph"
             className="w-full opacity-90 blur-[2px]	 "
@@ -107,7 +107,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

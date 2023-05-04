@@ -20,7 +20,7 @@ const Menu = () => {
                   </h2>
 
 
-        <div className=''>
+        <div className='px-6 lg:px-0'>
             {
                 recipes.map(recipe =><MenuItem
                 key={recipe.id}

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='mx-auto container mt-20'>
+        <div className='mx-auto container mt-20 px-10 lg:px-0'>
            <div className='border border-blue-400 rounded-lg p-4 mb-10'>
             <h2 className='text-2xl font-bold'> The differences between uncontrolled and controlled components.</h2>
             <p>

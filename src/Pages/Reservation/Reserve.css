@@ -1,0 +1,20 @@
+
+.reserve{
+   
+    background-image: url("https://img.freepik.com/free-photo/restaurant-interior_1127-3394.jpg?size=626&ext=jpg&ga=GA1.1.1435761111.1680237800&semt=ais");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-blend-mode: darken;
+     background-attachment: fixed;
+   width: 100%;
+   height: 650px;
+
+}
+.overlay {
+    background-color: black;
+    height: 100%;
+    opacity: 0.7;
+  
+
+}
