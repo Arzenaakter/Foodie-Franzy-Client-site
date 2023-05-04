@@ -49,7 +49,7 @@ const router = createBrowserRouter([
            { 
             path:':id',
             element: <PrivateRoute><SingleChefRecp></SingleChefRecp></PrivateRoute>,
-            loader:({params}) => fetch(` http://localhost:5000/chefs/${params.id}`)
+            loader:({params}) => fetch(` https://foodie-franzy-server-site.vercel.app/chefs/${params.id}`)
 
 
            

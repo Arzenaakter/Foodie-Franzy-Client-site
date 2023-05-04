@@ -14,7 +14,7 @@ const Cards = () => {
    
 
 useEffect(()=>{
-    fetch('http://localhost:5000/chefs')
+    fetch('https://foodie-franzy-server-site.vercel.app/chefs')
     .then(res =>res.json())
     .then(data => setChefsInfo(data))
 },[])

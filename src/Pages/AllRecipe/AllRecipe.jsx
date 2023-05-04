@@ -7,23 +7,24 @@ import '@smastrom/react-rating/style.css'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const RecipeInfo = ({recipe}) => {
-
-     const [disable, setDisable] = useState(false)
 
 
-const handleFav =()=>{
-    toast('Added to favorites',{position: "top-center",});
-    setDisable(true)
+const AllRecipe = ({re}) => {
+    const [disable, setDisable] = useState(false)
+    const [reating, setRating] = useState(0)
 
-}
+    const handleFav =()=>{
+        toast('Added to favorites',{position: "top-center",});
+        setDisable(true)
+    
+    }
 
-    const [reating, setRating] =  useState(0)
-    const {recipe_name,cooking_method, ingredients,rating,recipe_img} = recipe
-    // console.log(recipe);
+    console.log(re);
+    const {recipe_name,cooking_method, ingredients,rating,recipe_img} = re;
+
+
     return (
-
- 
+        
         <div className="card w-full bg-base-100 shadow-2xl">
         <figure><img src={recipe_img} alt="food" className='h-56 w-full' /></figure>
         <div className="card-body">
@@ -49,4 +50,4 @@ const handleFav =()=>{
     );
 };
 
-export default RecipeInfo;
+export default AllRecipe;
