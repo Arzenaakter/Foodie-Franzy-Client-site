@@ -1,14 +1,27 @@
 # b7a10-chef-recipe-hunter-client-side-Arzenaakter
 
-<!-- 
-http://preview.themeforest.net/item/foodie-restaurant-cafe-html-template/full_screen_preview/18214246?_ga=2.179817700.1540732580.1682950484-1544877804.1682950484
 
-http://preview.themeforest.net/item/flyfood-food-blog-wordpress-theme/full_screen_preview/20695115?_ga=2.187622760.1540732580.1682950484-1544877804.1682950484
-
-
- -->
-
-* In this website 
+* This website about Food recipe
+* The Website have some section
+    * navbar
+    * hero section
+    * about chef
+    * menus
+    * client review
+    * table reservation form
+    * footer
+* User can't see chef recipe if he/she was not login in the website.
+* in this website i use 
+   * react-router-dom
+   * tailwind css & daisy ui
+   * firebase
+   * react icons
+   * express js
+   * react toast
+   * swiper
+   * react spniner
+* Data of this website load from server site
+* use react lazy load in the chef image
 
 
 

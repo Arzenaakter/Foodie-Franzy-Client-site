@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MenuItem = ({recipe}) => {
-    console.log(recipe);
+    // console.log(recipe);
     const {recipe_name,recipe_img,about_food} = recipe;
     return (
         <div className=''>
