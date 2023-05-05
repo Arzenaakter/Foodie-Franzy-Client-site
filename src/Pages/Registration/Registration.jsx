@@ -29,12 +29,14 @@ const Registration = () => {
    console.log(name,photo,email,password,confirm);
 
         if(password != confirm){
-            setError("Password doesn't match")
+           setError("Password doesn't match")
+           return;
         }
 
 
         if(password.length<6){
-          setError("Password length must be 6 ");
+           setError("Password length must be 6 ");
+           return;
         }
 
 
