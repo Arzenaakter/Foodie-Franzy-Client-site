@@ -1,5 +1,9 @@
-import React from 'react';
+import React from "react";
+import ReactDOM from "react-dom";
+import Pdf from "react-to-pdf";
 
+
+const ref = React.createRef();
 
 
 
@@ -7,10 +11,16 @@ const Blog = () => {
   
 
     return (
-        <>
 
-
-        <div className='mx-auto container mt-20 px-10 lg:px-0' >
+    
+        <div className="container ">
+            <div className=" text-center mt-4">
+            <Pdf targetRef={ref} filename="foodie-franzy.pdf">
+                 {({ toPdf }) => <button onClick={toPdf} className='btn btn-outline'>Make Pdf</button>}
+             </Pdf>
+                
+            </div>
+        <div className='mx-auto container mt-10 px-10 lg:px-0' ref={ref}>
            <div className='border border-blue-400 rounded-lg p-4 mb-10'>
             <h2 className='text-2xl font-bold'> The differences between uncontrolled and controlled components.</h2>
             <p>
@@ -64,7 +74,7 @@ const Blog = () => {
         </div>
         
         
-        </>
+        </div>
     );
 };
 
