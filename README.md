@@ -18,11 +18,12 @@
    * react icons
    * express js
    * react toast
-   * swiper
-   * react spniner
+   * react swiper 
+   * react spinner
 * Data of this website load from server site
 * use react lazy load in the chef image
 * https://foodie-franzy.web.app/
+* 
 
 
 
